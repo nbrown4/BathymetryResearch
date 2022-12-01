@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(315deg, #1b1968 0%, #329de9 74%);
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+.div-1 { 
+  opacity: 100%;
+  border-radius: 100px;
+  height: 700px;
+  width: 700px;
+  margin: auto;
+  background:linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  overflow:hidden;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  top: 20px;
+  position: relative;
+  
+}
+
+
+
+.testDiv{
+  opacity: 100%;
+  border-radius: 100px;
+  height: 500px;
+  width: 700px;
+  margin: auto;
+  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  overflow:hidden;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  top: 20px;
+  position: relative;
+}
+
+.outputDiv{
+  opacity: 100%;
+  border-radius: 100px;
+  height: 500px;
+  width: 700px;
+  margin: auto;
+  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  overflow:hidden;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  top: 20px;
+  position: relative;
+}
+
+
+
+.selectFile{
+  color: black;
+}
+
+.plotPicture{
+
+  width:  500px;
+  height: 400px;
+
+}
+
+
+#drop-area {
+    border-radius: 100px;
+    border: 2px dashed rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 480px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    color: white;
+    margin-left:auto;
+    margin-right:auto;
+    
+  }
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  p {
+    margin-top: 0;
+    font-family:Arial, Helvetica, sans-serif
+  }
+  
+  .my-form {
+    margin-bottom: 10px;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .selectFile {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  #fileElem {
+    display: none;
+  }
+
+ 
+
+  button[type=button] {
+    width: 150px;
+    height: 50px;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    background-size: 200% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: 500ms;
+    top: 100px;
+    border-radius: 20px;
+  }
+
+  button[type=button]:before {
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 35px;
+    background-color: #1b2845;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+    transition: 500ms;
+    top: 15px;
+  }
+
+  button[type=button]:hover {
+    background-position: right;
+  }
+
+  button[type=button]:hover:before {
+    color: rgba(255,255,255,0.8);
+  }
+
+  button[type=button]:focus {
+    outline: none;
+  }
+
+    

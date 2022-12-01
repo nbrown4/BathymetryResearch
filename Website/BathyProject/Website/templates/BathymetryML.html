@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Machine Learning For Bathymetry</title>
+    <link href="../static/styles.css" rel="stylesheet" />
+    
+  </head>
+  <body>
+    <button type="button" id="dataclean">Data Cleaning</button>
+    <button type="button" id="modelTrain">Train Model</button>
+    <button type="button" id="testData">Test Model</button>
+    <button type="button" id="outputProfile">Create Bathymetry</button>
+    <div class="div-1">
+      <h1> Picture Perfect Ocean Floor Mapping: </h1>
+      <h1>A Machine Learning Bathymetry Study</h1>
+      
+      <p>Welcome to our machine learning project!</p>
+      <form method="POST", onsubmit="disableButton()">
+        <button name="PythonGo", id="cleanButton"> <p>Clean Data!</p></button>
+      </form>
+
+      
+
+      {% if parseComplete %}
+        <br>
+        <img src="../static/my_plot.png" class = plotPicture> </img>
+      {% endif %}
+  
+    </div>
+    
+   
+
+  </body>
+  <script src="../static/script2.js" defer>  </script>
+</html>

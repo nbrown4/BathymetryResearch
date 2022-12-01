@@ -1,0 +1,11 @@
+{
+  "name": "bathyelectron",
+  "version": "1.0.0",
+  "description": "BathyElectronApp",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "nickBrown",
+  "license": "ISC"
+}

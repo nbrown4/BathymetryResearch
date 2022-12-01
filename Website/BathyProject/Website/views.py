@@ -1,0 +1,68 @@
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+import os
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt 
+
+from .FullScript import sub80samples
+from .FullScript import Script_3000
+path = os.getcwd() + "\\Website\\static\\DataFiles"
+
+entries = os.listdir(path)
+
+
+views = Blueprint('views',__name__)
+
+@views.route("/", defaults={'filename':None, 'filename2':None}, methods=['GET', 'POST'])
+@views.route("/<filename>/<filename2>", methods=['GET', 'POST'])
+def home(filename, filename2):
+    if request.method == 'POST':
+        print(request.form)
+
+        for i in request.form:
+            if i == "PythonGo":
+                machine(filename,filename2)
+                return render_template("BathymetryML.html", parseComplete=True)
+
+        return render_template("BathymetryML.html")
+
+    return render_template("BathymetryML.html")
+
+@views.route("/BathymetryML/", methods=['GET', 'POST'])
+def BathymetryML():
+    return redirect(url_for("views.home"))
+
+@views.route("/dragAndDrop/", methods=['GET', 'POST'])
+def dragAndDrop():
+    for i in request.form:
+        if i == "filePick":
+            userInput = request.form.get("filePick")
+            userOutput = request.form.get("filePick2")
+            print(userInput)
+            return redirect(url_for("views.home", filename=userInput, filename2=userOutput))
+
+    return render_template("dragAndDrop.html", len = len(entries), entries = entries)
+
+
+@views.route("/testPage/", methods=['GET', 'POST'])
+def testPage(): 
+    if request.method == 'POST':
+        for i in request.form:
+            if i == "loadAnimation":
+                return render_template("testPage.html", a = "../static/BrainAnimationVid0001-0125.mp4")
+                
+    return render_template("testPage.html")
+
+@views.route("/outputPage/", methods=['GET', 'POST'])
+def outputPage():
+    return render_template("outputPage.html")
+
+def machine(filename,filename2):
+    dfMain = sub80samples(filename)
+    dfMain = dfMain['sample']
+    dfMain.to_csv('Website/static/CleanData/clean80.csv')
+    DF_3000 = Script_3000(filename2)
+    DF_3000.to_csv('Website/static/CleanData/DF_3000.csv')
+
