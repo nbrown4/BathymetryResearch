@@ -15,33 +15,33 @@ entries = os.listdir(path)
 
 views = Blueprint('views',__name__)
 
-@views.route("/", defaults={'filename':None, 'filename2':None}, methods=['GET', 'POST'])
-@views.route("/<filename>/<filename2>", methods=['GET', 'POST'])
-def home(filename, filename2):
+@views.route("/BathymetryML/", defaults={'filename':None, 'filename2':None}, methods=['GET', 'POST'])
+@views.route("/BathymetryML/<filename>/<filename2>", methods=['GET', 'POST'])
+def BathymetryML(filename, filename2):
     if request.method == 'POST':
         print(request.form)
 
         for i in request.form:
             if i == "PythonGo":
-                machine(filename,filename2)
+                machine(filename, filename2)
                 return render_template("BathymetryML.html", parseComplete=True)
 
         return render_template("BathymetryML.html")
 
     return render_template("BathymetryML.html")
 
-@views.route("/BathymetryML/", methods=['GET', 'POST'])
-def BathymetryML():
-    return redirect(url_for("views.home"))
-
 @views.route("/dragAndDrop/", methods=['GET', 'POST'])
 def dragAndDrop():
+    return redirect(url_for("views.home"))
+
+@views.route("/", methods=['GET', 'POST'])
+def home():
     for i in request.form:
         if i == "filePick":
             userInput = request.form.get("filePick")
             userOutput = request.form.get("filePick2")
             print(userInput)
-            return redirect(url_for("views.home", filename=userInput, filename2=userOutput))
+            return redirect(url_for("views.BathymetryML", filename=userInput, filename2=userOutput))
 
     return render_template("dragAndDrop.html", len = len(entries), entries = entries)
 

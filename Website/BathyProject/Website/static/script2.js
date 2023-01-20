@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function openFileWindow() { 
-      window.location.href = '../dragAndDrop'
+      window.location.href = '../../dragAndDrop'
     }
   
     function openTestWindow() { 
-      window.location.href = '../testPage'
+      window.location.href = '../../testPage'
       }
   
     function openOutputWindow() { 
-        window.location.href = '../outputPage'
+        window.location.href = '../../outputPage'
       }
 
     function runPython(){
