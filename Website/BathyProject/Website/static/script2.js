@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log('finished');
       });
     }
+
+  
   
     const buttonOne = document.querySelector('#dataclean');
     buttonOne.addEventListener('click', openDataWindow);

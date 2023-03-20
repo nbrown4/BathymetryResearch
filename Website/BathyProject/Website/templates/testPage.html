@@ -8,25 +8,31 @@
     
   </head>
   <body>
-    <button type="button" id="modelTrain">Train Model</button>
-    <button type="button" id="dataclean">Data Cleaning</button>
-    <button type="button" id="testData">Test Model</button>
-    <button type="button" id="outputProfile">Create Bathymetry</button>
-    <div class = testDiv>
-    <h1> Testing Page </h1>
-    
-    <p>This is the page that will run the machine learning testing once it is done.</p>
-  
-    
-    <form method="POST">
-      <button name="loadAnimation"> <p>Run The Test</p></button>
-    </form>
+    <div class = "container">
+      
+      <div class = "button-div">
+      <button type="button" id="modelTrain">Train Model</button>
+      <button type="button" id="dataclean">Data Cleaning</button>
+      <button type="button" id="testData">Test Model</button>
+      <button type="button" id="outputProfile">Create Bathymetry</button>
+      </div>
 
-    <video width="400" height="500" class="brainPic" autoplay muted loop>
-      <source src={{a}} type="video/mp4">
-    </video>
+      <div class = testDiv>
+        <h1> Testing Page </h1>
+        
+        <p>This is the page that will run the machine learning testing once it is done.</p>
+      
+        
+        <form method="POST">
+          <button name="loadAnimation"> <p>Run The Test</p></button>
+        </form>
+
+        <video width="400" height="500" class="brainPic" autoplay muted loop>
+          <source src={{a}} type="video/mp4">
+        </video>
+      </div>
+
     </div>
-
 
   </body>
   <script src="../static/script2.js" defer>  </script>

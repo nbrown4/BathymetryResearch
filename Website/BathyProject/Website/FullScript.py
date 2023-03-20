@@ -398,7 +398,11 @@ def sub80samples(filename):
     df = df[df['channel'] == 2 ]
     plt.clf()
     plt.plot(df)
-    plt.savefig('Website/static/my_plot.png')
+    plt.xlabel('Sample Number')
+    plt.ylabel('Signal Magnitude')
+    plt.title('Sonar Message Data')
+    plt.savefig('Website/static/my_plot.png', dpi = 300, bbox_inches = 'tight')
+    
     return(df)
 
 

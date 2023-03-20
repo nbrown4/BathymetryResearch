@@ -4,40 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Machine Learning For Bathymetry</title>
-    <link href="../static/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/styles.css"/>
     
   </head>
   <body>
-    <button type="button" id="modelTrain">Train Model</button>
-    <button type="button" id="dataclean">Data Cleaning</button>
-    <button type="button" id="testData">Test Model</button>
-    <button type="button" id="outputProfile">Create Bathymetry</button>
 
-    <div id="drop-area">
-      <h1> Picture Perfect Ocean Floor Mapping: </h1>
-      <h1>A Machine Learning Bathymetry Study</h1>
-      
-      <p>Welcome to our machine learning project!<br>
-        Select the file from the following list that you would like to train from!
+    <div class="container">
 
-        <form method = "POST" class = "DropDown">
-          <label for="filePick">Input File</label>
+      <div class = "button-div">
+      <button type="button" id="modelTrain">Train Model</button>
+      <button type="button" id="dataclean">Data Cleaning</button>
+      <button type="button" id="testData">Test Model</button>
+      <button type="button" id="outputProfile">Create Bathymetry</button>
+      </div>
+
+      <div id="drop-area">
+        <h1> Picture Perfect Ocean Floor Mapping: </h1>
+        <h1>A Machine Learning Bathymetry Study</h1>
         
-          <select name="filePick" method="POST">
-            {% for file in entries[0:] %}
-              <option value="{{file}}">{{file}}</option>
-            {% endfor %}
-          </select><br>
-          <label for="filePick2">Output File</label>
-          <select name="filePick2" method="POST">
-            {% for file in entries[0:] %}
-              <option value="{{file}}">{{file}}</option>
-            {% endfor %}
-          </select>
-          <button type="submit" class="btn btn-primary">Select File</button>
-        </form>
-      
+        <p>Welcome to our machine learning project!<br>
+          Select the file from the following list that you would like to train from!
 
+          <form method = "POST" class = "DropDown">
+            <label for="filePick">Input File</label>
+          
+            <select name="filePick" method="POST">
+              {% for file in entries[0:] %}
+                <option value="{{file}}">{{file}}</option>
+              {% endfor %}
+            </select><br>
+            <label for="filePick2">Output File</label>
+            <select name="filePick2" method="POST">
+              {% for file in entries[0:] %}
+                <option value="{{file}}">{{file}}</option>
+              {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">Select File</button>
+          </form>
+        </div>
+    </div>
 
 
   </body>
