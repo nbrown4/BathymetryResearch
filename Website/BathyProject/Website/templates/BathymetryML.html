@@ -4,10 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Machine Learning For Bathymetry</title>
-    <link href="../../static/styles.css" rel="stylesheet" />
+    <link href="../static/styles.css" rel="stylesheet" />
+    
+    
+
     
   </head>
   <body>
+    
 
     <div class = "container">
 
@@ -24,15 +28,20 @@
         
         <p>Welcome to our machine learning project!</p>
         <form method="POST", onsubmit="disableButton()">
-          <button name="PythonGo", id="cleanButton"> <p>Clean Data!</p></button>
+          <button name="PythonGo", id="cleanButton" onclick="showDiv()"> <p>Clean Data!</p></button>
         </form>
       
+
+       
+        <img src="https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp" alt="My GIF" style="display:none;" id="my-gif">
+       
+        
       
 
         {% if parseComplete %}
           <br>
           
-          <img src="../../static/my_plot.png" class = plotPicture> </img>
+          <img id="trigger-image" img src="../../static/my_plot.png" class = plotPicture alt="Trigger Image" onload="hideGif()">
         {% endif %}
 
       </div>
@@ -40,5 +49,16 @@
    
 
   </body>
-  <script src="../../static/script2.js" defer>  </script>
+  <script>
+   function hideGif() {
+      const gifDiv = document.getElementById('my-gif');
+      gifDiv.style.display = 'none';
+    }
+
+
+    function showDiv() {
+      document.getElementById("my-gif").style.display = "block";
+    }
+  </script>
+  
 </html>

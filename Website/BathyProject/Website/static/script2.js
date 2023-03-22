@@ -1,9 +1,13 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     function createParagraph() {
       const para = document.getElementById('functionality');
       para.textContent = 'No Functionality Yet! Nice try though!';
   
     }
+
+
   
     function openDataWindow() { 
       window.location.href = '../BathymetryML'
@@ -39,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-  
+   
+
   
     const buttonOne = document.querySelector('#dataclean');
     buttonOne.addEventListener('click', openDataWindow);
@@ -56,5 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonFive = document.querySelector('#runTheTest');
     buttonFive.addEventListener('click', runPython);
 
-  
+    
+
+
+
+   
   });

@@ -74,11 +74,13 @@ body{
 }
 
 .plotPicture{
-
+  z-index: 3;
   width:  550px;
   height: 450px;
 
 }
+
+
 
 
 #drop-area {

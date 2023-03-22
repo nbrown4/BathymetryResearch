@@ -109,6 +109,8 @@ function uploadFile(file) {
   formData.append('file', file)
   xhr.send(formData)
 }
+
+
 function previewFile(file) {
   let reader = new FileReader()
   reader.readAsDataURL(file)
@@ -190,3 +192,4 @@ function uploadFile(file, i) { // <- Add `i` parameter
   formData.append('file', file)
   xhr.send(formData)
 }
+

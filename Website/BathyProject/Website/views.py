@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify, make_response
 import os
 import numpy as np
 import pandas as pd
@@ -24,6 +24,9 @@ def BathymetryML(filename, filename2):
         for i in request.form:
             if i == "PythonGo":
                 machine(filename, filename2)
+
+                
+                
                 return render_template("BathymetryML.html", parseComplete=True)
 
         return render_template("BathymetryML.html")
