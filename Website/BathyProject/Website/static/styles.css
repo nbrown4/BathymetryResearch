@@ -193,8 +193,10 @@ body{
 
   #my-gif
   {
-    position: absolute;
+    margin-left: 230px;
     
+    position: absolute;
+    left: 500;
 
 
 
