@@ -196,9 +196,16 @@ body{
     margin-left: 250px;
     margin-top: 50px;
     position: absolute;
-    left: 500;
+    
 
 
+
+  }
+
+  .brainPic{
+   
+    left: 200px;
+    position: absolute;
 
   }
 
