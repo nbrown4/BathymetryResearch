@@ -26,14 +26,26 @@
         <form method="POST">
           <button name="loadAnimation"> <p>Run The Test</p></button>
         </form>
-
-        <video width="400" height="500" class="brainPic" autoplay muted loop>
-          <source src={{a}} type="video/mp4">
-        </video>
+        {% if model_loading %}
+        <img src={{a}} style="padding-top: 30px;" />
+        {% endif %}
       </div>
 
     </div>
 
+
+
   </body>
+  <script>
+    function hideGif() {
+       const gifDiv = document.getElementById('my-gif');
+       gifDiv.style.display = 'none';
+     }
+ 
+ 
+     function showDiv() {
+       document.getElementById("my-gif").style.display = "block";
+     }
+   </script>
   <script src="../static/script2.js" defer>  </script>
 </html>

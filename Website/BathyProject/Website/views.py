@@ -54,7 +54,7 @@ def testPage():
     if request.method == 'POST':
         for i in request.form:
             if i == "loadAnimation":
-                return render_template("testPage.html", a = "../static/BrainAnimationVid0001-0125.mp4")
+                return render_template("testPage.html", a = "..\..\static\loading-gif.gif", model_loading =True)
                 
     return render_template("testPage.html")
 
