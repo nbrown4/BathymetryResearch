@@ -394,8 +394,9 @@ def sub80samples(filename):
     a = {'sample':sampleStorage,'channel': channelArr, 'pingNum': pingNumArr}
 
     df = pd.DataFrame.from_dict(a)
-    df = df = df[df['pingNum'] == 64209 ]
+    df = df[df['pingNum'] == 64210 ]
     df = df[df['channel'] == 2 ]
+    print(df)
     plt.clf()
     plt.plot(df)
     plt.xlabel('Sample Number')
